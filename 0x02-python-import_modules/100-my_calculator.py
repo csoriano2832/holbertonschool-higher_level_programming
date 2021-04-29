@@ -21,7 +21,8 @@ if __name__ == "__main__":
     elif op == '*':
         print("{:d} {} {:d} = {:d}".format(num1, op, num2, mul(num1, num2)))
     elif op == '/':
-        print("{:d} {} {:d} = {:d}".format(num1, op, num2, div(num1, num2)))
+        if num2 != 0:
+            print("{:d} {} {:d} = {:d}".format(num1, op, num2, div(num1, num2)))
     else:
         print("Unknown operator. Available operators: +, -, *, and /")
         exit(1)

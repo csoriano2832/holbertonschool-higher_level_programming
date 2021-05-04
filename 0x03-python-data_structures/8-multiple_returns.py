@@ -3,9 +3,9 @@ def multiple_returns(sentence):
     data = [0, ""]
 
     data[0] = len(sentence)
-    try:
-        data[1] = sentence[0:1]
-    except:
+    if data[0] == 0:
         data[1] = None
+    else:
+        data[1] = sentence[0:1]
 
     return tuple(data)

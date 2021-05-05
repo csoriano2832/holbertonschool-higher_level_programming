@@ -10,7 +10,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *fast = NULL, *slow = NULL, *firstHalf = NULL, *secondHalf = NULL;
 
-	if (head == NULL)
+	if (head == NULL || *head == NULL)
 		return (1);
 
 	fast = *head;

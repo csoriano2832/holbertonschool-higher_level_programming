@@ -4,11 +4,12 @@ def best_score(a_dictionary):
         student = ""
         score = 0
 
-        for k, v in a_dictionary.items():
-            if v > score:
-                score = v
-                student = k
+        if len(a_dictionary) > 0:
+            for k, v in a_dictionary.items():
+                if v > score:
+                    score = v
+                    student = k
 
-        return student
+            return student
     else:
         return None

@@ -7,8 +7,8 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         ''' Constructor method creates a new instance of a square '''
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -36,18 +36,18 @@ class Square:
         if type(value) is tuple and len(value) == 2 and\
            type(value[0]) is int and type(value[1]) is int and\
            value[0] >= 0 and value[1] >= 0:
-                self.__position = value
+               self.__position = value
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
         ''' Returns the current square area '''
-        return self.__size**2
+        return self.size**2
 
     def my_print(self):
         ''' Prints in stdout the square with the character # '''
-        size = self.__size
-        x, y = self.__position
+        size = self.size
+        x, y = self.position
 
         if size == 0:
             print()

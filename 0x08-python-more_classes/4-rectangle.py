@@ -50,11 +50,13 @@ class Rectangle:
         """Returns perimeter of a rectangle"""
         if self.width == 0 or self.height == 0:
             return 0
-        return 2 *(self.width + self.height)
+        return 2 * (self.width + self.height)
 
     def __str__(self):
         """Prints the rectangle using the # character """
         str_rectangle = ""
+        if self.width == 0 or self.height == 0:
+            return str_rectangle
 
         for col in range(self.height):
             for row in range(self.width):

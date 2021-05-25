@@ -3,7 +3,7 @@
 import math
 
 
-class MagicClass():
+class MagicClass:
     """This class contains the methods area and circumference"""
 
     def __init__(self, radius=0):

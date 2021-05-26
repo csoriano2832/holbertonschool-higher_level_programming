@@ -1,12 +1,37 @@
 >>> add_integer = __import__('0-add_integer').add_integer
 
+Test[1]: Regular Addition
 >>> add_integer(6, 10)
 16
->>> add_integer(-6, 10)
-4
+
+Test[2]: Check Type
 >>> add_integer("hello", 10)
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
+
+Test[3]: Integer Casting
 >>> add_integer(3.14, 5)
 8
+
+Test[4]: Missing one argument
+>>> add_integer(10)
+108
+
+Test[5]: Missing two arguments
+>>> add_integer()
+Traceback (most recent call last):
+	...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Test[6]: Float overflow
+>>> add_integer(5000000000e1000000000, 100000)
+Traceback (most recent call last):
+	...
+OverflowError: cannot convert float infinity to integer
+
+Test[7]: Float NaN to integer
+>>> add_integer(float("NaN"), 85)
+Traceback (most recent call last):
+	...
+ValueError: cannot convert float NaN to integer

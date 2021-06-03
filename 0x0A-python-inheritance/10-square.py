@@ -48,3 +48,4 @@ class Square(Rectangle):
         ''' Constructor method '''
 
         super().__init__(size, size)
+        self.__size = size

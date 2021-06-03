@@ -1,1 +1,16 @@
 #!/usr/bin/python3
+import json
+'''
+This module contains one function:
+----------------------------------
+load_from_json_file()
+----------------------------------
+'''
+
+
+def load_from_json_file(filename):
+    ''' Creates an Object from JSON file '''
+
+    with open(filename) as f:
+        for line in f:
+            return json.loads(line)

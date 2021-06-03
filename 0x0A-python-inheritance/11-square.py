@@ -38,7 +38,10 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         ''' String representation of a rectangle '''
 
-        return ("[Rectangle] {}/{}".format(self.__width, self.__height))
+        if isinstance(self, Square):
+            return ("[Square] {}/{}".format(self.__width, self.__height))
+        elif isinstance(self, Rectangle):
+            return ("[Rectangle] {}/{}".format(self.__width, self.__height))
 
 
 class Square(Rectangle):
@@ -48,8 +51,3 @@ class Square(Rectangle):
         ''' Constructor method '''
 
         super().__init__(size, size)
-
-    def __str__(self):
-        ''' String representation of a square '''
-
-        return ("[Square] {}/{}".format(self.__size, self.__size))

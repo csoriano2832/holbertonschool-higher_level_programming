@@ -25,10 +25,10 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         ''' Constructor method '''
 
-        if not super().integer_validator("width", width):
-            self.__width = width
-        if not super().integer_validator("height", height):
-            self.__height = height
+        super().integer_validator("width", width)
+        self.__width = width
+        super().integer_validator("height", height)
+        self.__height = height
 
     def area(self):
         ''' Returns the area of a rectangle '''
@@ -48,4 +48,3 @@ class Square(Rectangle):
         ''' Constructor method '''
 
         super().__init__(size, size)
-

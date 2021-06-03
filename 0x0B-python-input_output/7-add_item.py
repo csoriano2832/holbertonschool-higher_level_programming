@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-import json
-import sys
 '''
 This module contains two functions:
 -------------------------------------
@@ -8,6 +6,8 @@ save_to_json_file(my_obj, filename)
 load_from_json_file(filename)
 -------------------------------------
 '''
+import json
+import sys
 
 
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file

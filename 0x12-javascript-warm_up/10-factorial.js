@@ -11,7 +11,8 @@ function factorial (num) {
     return 1;
   }
 
-  return num *= factorial(num - 1);
+  num *= factorial(num - 1);
+  return num;
 }
 
 console.log(factorial(intArg));

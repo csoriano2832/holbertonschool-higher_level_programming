@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const { argv } = require('process');
 const argc = argv.length;
-const arr = Array();
+const arr = [];
 
 if (argc < 4) {
   console.log(0);

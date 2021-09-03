@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-
+""" This module fetches a website """
 import urllib.request
 
+
 if __name__ == "__main__":
+    """ Only executes as main """
     with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
         html = response.read()
 

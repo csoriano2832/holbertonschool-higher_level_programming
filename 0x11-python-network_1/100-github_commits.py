@@ -14,5 +14,8 @@ if __name__ == "__main__":
     commits = requests.get(url).json()
 
     for index in range(0, 10):
-        print(commits[index].get("sha"), end=": ")
-        print(commits[index].get("commit").get("author").get("name"))
+        print("{}: {}".format(commits[index].get("sha"),
+                              commits[index].get("commit").get("author")
+                              .get("name")))
+# print(commits[index].get("sha"), end=": ")
+# print(commits[index].get("commit").get("author").get("name"))

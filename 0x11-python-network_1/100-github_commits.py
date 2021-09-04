@@ -15,6 +15,6 @@ if __name__ == "__main__":
 
     for index in range(0, 10):
         if index < len(commits):
-        print("{}: {}".format(commits[index].get("sha"),
-                              commits[index].get("commit").get("author")
-                              .get("name")))
+            print("{}: {}".format(commits[index].get("sha"),
+                                  commits[index].get("commit").get("author")
+                                  .get("name")))

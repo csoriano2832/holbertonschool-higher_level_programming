@@ -6,8 +6,8 @@ import sys
 
 if __name__ == "__main__":
     """ Only executes as main """
-    
-    url = "https://api.github.com/users/csoriano2832"
+
+    url = 'https://api.github.com/user'
     user = sys.argv[1]
     password = sys.argv[2]
 

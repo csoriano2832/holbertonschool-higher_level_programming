@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     try:
         json = r.json()
-    except JSONDecodeError as e:
+    except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")
     else:
         if not json:
